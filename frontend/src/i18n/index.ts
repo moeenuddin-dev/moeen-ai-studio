@@ -6,8 +6,8 @@ import en from './langs/en.json'
 
 // 支持的语言列表（与 lang-selector 选项一致）
 export const LANGS: { code: string; label: string }[] = [
-  { code: 'zh', label: '🇨🇳 中文' },
   { code: 'en', label: '🇺🇸 English' },
+  { code: 'zh', label: '🇨🇳 中文' }, 
   { code: 'ru', label: '🇷🇺 Русский' },
   { code: 'ja', label: '🇯🇵 日本語' },
   { code: 'ko', label: '🇰🇷 한국어' },
@@ -35,20 +35,20 @@ const RTL_LANGS = ['ar', 'fa', 'ur']
 // 已加载的语言数据（zh/en 预载；其余按需加载后填入，响应式触发 UI 更新）
 const langData = reactive<Record<string, Record<string, string>>>({ zh, en })
 
-const currentLang = ref('zh')
+const currentLang = ref('en')
 
 function initLang(): string {
   try {
-    return localStorage.getItem('lang') || 'zh'
+    return localStorage.getItem('lang') || 'en'
   } catch {
-    return 'zh'
+    return 'en'
   }
 }
 
 export function t(key: string): string {
   const lang = currentLang.value
   const data = langData[lang]
-  const val = (data && data[key]) ?? (langData['zh'] && langData['zh'][key]) ?? key
+  const val = (data && data[key]) ?? (langData['en'] && langData['en'][key]) ?? key
   return val
 }
 

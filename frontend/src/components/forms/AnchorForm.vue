@@ -77,7 +77,7 @@ async function submitAnchor() {
   <div>
     <div class="flex items-center gap-2 mb-4 text-xs text-muted">
       <span class="text-muted">💡</span>
-      <a href="https://video.lichuanyang.top/guides/prompt-examples-anchor" target="_blank" rel="noopener" class="hover:text-accent transition-colors">{{ t('exampleLinkAnchor') }}</a>
+      <a href="/" target="_blank" rel="noopener" class="hover:text-accent transition-colors">{{ t('exampleLinkAnchor') }}</a>
     </div>
 
     <div class="glass-card rounded-2xl p-6 mb-4">

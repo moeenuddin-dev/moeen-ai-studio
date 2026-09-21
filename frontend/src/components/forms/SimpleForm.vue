@@ -234,7 +234,7 @@ async function submitImage() {
   <div>
     <div class="flex items-center gap-2 mb-4 text-xs text-muted">
       <span class="text-muted">💡</span>
-      <a href="https://video.lichuanyang.top/guides/prompt-examples-simple" target="_blank" rel="noopener" class="hover:text-accent transition-colors">{{ t('exampleLinkSimple') }}</a>
+      <a href="/" target="_blank" rel="noopener" class="hover:text-accent transition-colors">{{ t('exampleLinkSimple') }}</a>
     </div>
 
     <!-- Sub-mode selector -->

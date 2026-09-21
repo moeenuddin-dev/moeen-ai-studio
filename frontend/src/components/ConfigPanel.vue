@@ -285,8 +285,8 @@ initCollapse()
       </div>
       <div class="flex flex-wrap items-center gap-x-5 gap-y-1.5 mt-3 text-xs">
         <a href="https://platform.agnes-ai.com" target="_blank" rel="noopener" class="text-accent hover:text-ink transition-colors">🚀 {{ t('apiKeyGetLink') }}</a>
-        <a href="https://video.lichuanyang.top/guides/api-key" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">📖 {{ t('apiKeyGuideLink') }}</a>
-        <a href="https://video.lichuanyang.top/demo" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">⚡ {{ t('apiKeyDemoLink') }}</a>
+        <a href="/" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">📖 {{ t('apiKeyGuideLink') }}</a>
+        <a href="/" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">⚡ {{ t('apiKeyDemoLink') }}</a>
       </div>
     </div>
   </div>

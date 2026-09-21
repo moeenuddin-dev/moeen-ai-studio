@@ -7,7 +7,7 @@
  * - 诊断信息报告拼接（复制 / GitHub Issue 预填共用）
  * GitHub Issue 链接构造（含编码长度截断与降级）
  */
-
+const GITHUB_REPO = 'https://github.com/moeenuddin-dev/moeen-ai-studio'
 import { t } from '@/i18n'
 
 // ── 常量 ──
@@ -28,8 +28,7 @@ export const TRACEBACK_MAX = 8000
  */
 const ISSUE_BODY_MAX_RAW = 4000
 
-export const GITHUB_REPO = 'https://github.com/lcy362/agnes-video-generator'
-export const FAQ_URL = 'https://video.lichuanyang.top/faq'
+export const FAQ_URL = '/'
 
 // ── 重试计数（localStorage 持久化） ──
 

@@ -30,33 +30,37 @@ msg() {
   fi
 }
 
-# ── 启动图案（ASCII art）：TTY 下亮青色显示，非 TTY 纯文本 ──────────
-FSV_LOGO=(
-  '   _____ ______     __'
-  '  |  ___/ ___\ \   / /'
-  '  | |_  \___ \\ \ / /'
-  '  |  _|  ___) |\ V /'
-  '  |_|   |____/  \_/'
-)
-print_logo() {
-  if [ "$_IS_TTY" = "1" ]; then
-    printf '\033[1;36m\n'
-    printf '%s\n' "${FSV_LOGO[@]}"
-    printf '\033[0m'
+# ── 语言检测：仅中文环境显示中文，其他情况一律英文 ──────────────
+_LANG_VAL="${LC_ALL:-${LC_MESSAGES:-${LANG:-}}}"
+_IS_ZH=0
+case "$_LANG_VAL" in
+  zh*) _IS_ZH=1 ;;
+esac
+msg() {
+  if [ "$_IS_ZH" = "1" ]; then
+    printf '%s\n' "$1"
   else
-    printf '\n'
-    printf '%s\n' "${FSV_LOGO[@]}"
+    printf '%s\n' "$2"
   fi
 }
 
 echo "================================================"
-print_logo
-msg "   free-short-video — 免费 AI 短视频生成" "   free-short-video — Free AI Short Video Generator"
 echo ""
-msg "   $(link 'https://video.lichuanyang.top' '🌐 官网：https://video.lichuanyang.top')" "   $(link 'https://video.lichuanyang.top' '🌐 Website: https://video.lichuanyang.top')"
-msg "   $(link 'https://video.lichuanyang.top/demo' '⚡ 在线体验（免安装）：https://video.lichuanyang.top/demo')" "   $(link 'https://video.lichuanyang.top/demo' '⚡ Try Online (no install): https://video.lichuanyang.top/demo')"
+echo "   ███╗   ███╗ ██████╗ ███████╗███████╗███╗   ██╗"
+echo "   ████╗ ████║██╔═══██╗██╔════╝██╔════╝████╗  ██║"
+echo "   ██╔████╔██║██║   ██║█████╗  █████╗  ██╔██╗ ██║"
+echo "   ██║╚██╔╝██║██║   ██║██╔══╝  ██╔══╝  ██║╚██╗██║"
+echo "   ██║ ╚═╝ ██║╚██████╔╝███████╗███████╗██║ ╚████║"
+echo "   ╚═╝     ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═══╝"
+echo ""
+echo "              AI STUDIO"
+echo ""
+echo "   Your Personal AI Video Generator"
+echo "   ─────────────────────────────────"
+echo "   Server running at http://localhost:8765"
 echo "================================================"
 echo ""
+
 
 # ── L5: 环境校验 ──────────────────────────────────────────────
 

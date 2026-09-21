@@ -152,9 +152,9 @@ function selectExecMode(mode: 'auto' | 'manual') {
     <!-- 官网引导 -->
     <div class="flex flex-wrap items-center gap-x-4 gap-y-1 mb-4 text-xs text-muted">
       <span class="text-muted">💡</span>
-      <a href="https://video.lichuanyang.top/guides/prompt-tips" target="_blank" rel="noopener" class="hover:text-accent transition-colors">🎯 {{ t('formTipTips') }}</a>
+      <a href="/" target="_blank" rel="noopener" class="hover:text-accent transition-colors">🎯 {{ t('formTipTips') }}</a>
       <span class="text-ink/10 select-none">·</span>
-      <a href="https://video.lichuanyang.top/api-docs" target="_blank" rel="noopener" class="hover:text-accent transition-colors">🧠 {{ t('formTipModels') }}</a>
+      <a href="/" target="_blank" rel="noopener" class="hover:text-accent transition-colors">🧠 {{ t('formTipModels') }}</a>
     </div>
 
     <!-- 6 种任务表单 -->

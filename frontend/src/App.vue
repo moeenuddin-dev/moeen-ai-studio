@@ -107,22 +107,6 @@ async function autoReconnectRunningTask() {
   <ProgressPage v-if="appState.view === 'progress'" />
 
   <div v-else class="flex justify-center gap-3 px-4">
-    <!-- Left sidebar -->
-    <aside class="hidden lg:block sticky top-[120px] self-start w-[130px] shrink-0 mt-8">
-      <div class="sidebar-card">
-        <div class="stitle">{{ t('adSupportTitle') }}</div>
-        <p class="text-muted text-xs leading-relaxed mb-2">{{ t('adSupportDesc') }}</p>
-        <a href="https://github.com/lcy362/agnes-video-generator" target="_blank" rel="noopener">{{ t('adStar') }}</a>
-        <p class="text-muted text-xs px-1 -mt-0.5 mb-1">{{ t('adStarDesc') }}</p>
-        <a href="https://github.com/lcy362/flint" target="_blank" rel="noopener" class="wrap">{{ t('adSkewStar') }}</a>
-        <p class="text-muted text-xs px-1 -mt-0.5 mb-1">{{ t('adSkewStarDesc') }}</p>
-        <a href="https://video.lichuanyang.top" target="_blank" rel="noopener">{{ t('adAdblock') }}</a>
-        <p class="text-muted text-xs px-1 -mt-0.5 mb-1">{{ t('adAdblockDesc') }}</p>
-        <a href="https://video.lichuanyang.top" target="_blank" rel="noopener">{{ t('adClick') }}</a>
-        <p class="text-muted text-xs px-1 -mt-0.5 mb-1">{{ t('adClickDesc') }}</p>
-        <p class="text-muted text-xs mt-2 leading-relaxed">{{ t('adThanks') }}</p>
-      </div>
-    </aside>
 
     <!-- Main content -->
     <div class="max-w-4xl flex-1 min-w-0 py-8">
@@ -147,22 +131,10 @@ async function autoReconnectRunningTask() {
             <option v-for="l in LANGS" :key="l.code" :value="l.code">{{ l.label }}</option>
           </select>
         </div>
-        <h1 class="text-2xl sm:text-4xl font-bold text-ink px-2" style="position: relative; z-index: 0">Agnes Video Generator</h1>
+        <h1 class="text-2xl sm:text-4xl font-bold text-ink px-2" style="position: relative; z-index: 0">Moeen AI Studio</h1>
         <p class="text-muted mt-2 text-sm tracking-wide px-2">{{ t('subtitle') }}</p>
       </div>
 
-      <!-- Resource links（窄屏可换行） -->
-      <nav class="flex justify-center items-center gap-x-4 gap-y-1.5 flex-wrap mb-8 text-xs tracking-wide">
-        <a href="https://video.lichuanyang.top/demo" target="_blank" rel="noopener" class="flex items-center gap-1 text-accent hover:text-ink transition-colors">🎬 Demo</a>
-        <span class="text-ink/5 select-none">·</span>
-        <a href="https://video.lichuanyang.top" target="_blank" rel="noopener" class="flex items-center gap-1 text-muted hover:text-ink-2 transition-colors">🏠 Home</a>
-        <span class="text-ink/5 select-none">·</span>
-        <a href="https://video.lichuanyang.top/guides/prompt-tips" target="_blank" rel="noopener" class="flex items-center gap-1 text-muted hover:text-ink-2 transition-colors">📖 Guides</a>
-        <span class="text-ink/5 select-none">·</span>
-        <a href="https://video.lichuanyang.top/faq" target="_blank" rel="noopener" class="flex items-center gap-1 text-muted hover:text-ink-2 transition-colors">❓ FAQ</a>
-        <span class="text-ink/5 select-none">·</span>
-        <a href="https://github.com/lcy362/agnes-video-generator" target="_blank" rel="noopener" class="flex items-center gap-1 text-muted hover:text-ink-2 transition-colors">📖 GitHub</a>
-      </nav>
 
       <!-- Config Panel -->
       <ConfigPanel />
@@ -207,39 +179,10 @@ async function autoReconnectRunningTask() {
         <TaskListPanel />
       </div>
 
-      <!-- Footer -->
-      <footer class="text-center pb-8">
-        <div class="border-t border-rule/30 pt-8 mt-4">
-          <p class="text-xs text-muted mb-3">{{ t('moreResources') }}</p>
-          <div class="flex justify-center flex-wrap gap-x-5 gap-y-2 text-xs">
-            <a href="https://video.lichuanyang.top" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">{{ t('projectHome') }}</a>
-            <a href="https://video.lichuanyang.top/demo" target="_blank" rel="noopener" class="text-accent hover:text-ink transition-colors">{{ t('onlineDemo') }}</a>
-            <a href="https://video.lichuanyang.top/guides/prompt-tips" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">{{ t('usageGuide') }}</a>
-            <a href="https://video.lichuanyang.top/faq" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">{{ t('faqTitle') }}</a>
-            <a href="https://video.lichuanyang.top/api-docs" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">{{ t('apiDocs') }}</a>
-            <a href="https://video.lichuanyang.top/learn" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">{{ t('appScenarios') }}</a>
-            <a href="https://video.lichuanyang.top/zh/guides/free-ai-tools" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">{{ t('agentMoreTools') }}</a>
-            <a href="https://github.com/lcy362/flint" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">{{ t('flintLinkLabel') }}</a>
-            <a href="https://github.com/lcy362/agnes-video-generator" target="_blank" rel="noopener" class="text-muted hover:text-ink-2 transition-colors">📖 GitHub</a>
-          </div>
-        </div>
-      </footer>
-    </div>
 
-    <!-- Right sidebar -->
-    <aside class="hidden lg:block sticky top-[120px] self-start w-[115px] shrink-0 mt-8">
-      <div class="sidebar-card">
-        <div class="stitle">{{ t('quickLinks') }}</div>
-        <a href="https://video.lichuanyang.top/demo" target="_blank" rel="noopener">{{ t('onlineDemo') }}</a>
-        <a href="https://video.lichuanyang.top/guides/prompt-tips" target="_blank" rel="noopener">{{ t('promptTips') }}</a>
-        <a href="https://video.lichuanyang.top/api-docs" target="_blank" rel="noopener">{{ t('modelOverview') }}</a>
-        <a href="https://video.lichuanyang.top/api-docs" target="_blank" rel="noopener">{{ t('apiCall') }}</a>
-        <a href="https://video.lichuanyang.top/faq" target="_blank" rel="noopener">{{ t('faqTitle') }}</a>
-        <a href="https://video.lichuanyang.top/api-docs" target="_blank" rel="noopener">{{ t('apiDocs') }}</a>
-        <a href="https://video.lichuanyang.top/learn" target="_blank" rel="noopener">{{ t('appScenarios') }}</a>
       </div>
-    </aside>
-  </div>
+      </div> 
+
 
   <!-- Voice Picker Modal -->
   <VoicePickerModal />
