@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: moeen-ai-studio
+    runtime: python
+    plan: free
+    buildCommand: |
+      cd frontend && npm install && npm run build && cd ..
+      pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: AGNES_API_KEY
+        sync: false
+    healthCheckPath: /
